@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>NBA-RJ</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="imagenes/assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="imagenes/assets/img/navbar-logo.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Tu Ubicacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#rutin">Rutinas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Estadistica">Equipos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#voto">Votacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactos">Contactanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                
+            </div>
+        </header>
+        <!-- Geoolocalizacion-->
+        <section class="page-section" id="services">
+             <article class="tarjeta">
+            <h1 id="descripcion"></h1>
+            <p id="temperatura"></p>
+            <img id="icono" src="" alt="icono temperatura">
+
+            <ul class="detalle">
+                <li>
+                    <span class="detalle_titulo">País</span>
+                    <span id="pais"></span>
+                </li>
+
+            </ul>
+        </article>
+        </section>
+        <!-- Streaming -->
+ <section class="seccion-rutinas" id="rutin">
+        <div class="header-rutinas">
+            <h2>Rutinas de Entrenamiento </h2>
+            <p>Aprende de los mejores coaches de la NBA</p>
+        </div>
+        
+        <div id="contenedor-rutinas" class="grid-videos">
+            </div>
+    </section>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModal()">&times;</span>
+            
+            <div class="video-wrapper">
+                <iframe id="player" 
+                        src="" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+        <!-- Redes sociales y Online-->
+        <section class="page-section" id="Estadistica">
+            <div class="container text-center mb-4">
+    <div class="alert alert-info d-inline-block">
+        <strong>¿Quieres recibir alertas?</strong> <br></br>
+        1. Inicia chat con <a href="https://t.me/MJ_notificaciones_bot" target="_blank">Nuestro Bot</a> <br>
+        2. Consigue tu ID con <a href="https://t.me/userinfobot" target="_blank">@userinfobot</a> <br>
+        <input type="text" id="user-telegram-id" class="form-control mt-2" placeholder="Pega tu ID aquí">
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="text-center">Equipos</h2>
+    <div id="tabla-nba" class="row justify-content-center">
+        <p class="text-center">Cargando equipos...</p>
+    </div>
+</div>
+        </section>
+
+
+
+        <!-- Base de datos -->
+        <section class="seccion-mvp" id="voto">
+    <div class="header-votos">
+        <h2>Votación MVP de la Semana</h2>
+        <p>Los votos se actualizan en vivo para todos los usuarios</p>
+    </div>
+
+    <div id="contenedor-votos" class="grid-mvp">
+        <div class="card-mvp">
+            <h3>Anthony Edwards</h3>
+            <div class="grafica-container">
+                <div id="barra-Anthony-Edwards" class="barra"></div>
+            </div>
+            <p><span id="votos-Anthony-Edwards">0</span> votos</p>
+            <button class="btn-votar" onclick="votar('Anthony Edwards')">Votar</button>
+        </div>
+
+        <div class="card-mvp">
+            <h3>Luka Doncic</h3>
+            <div class="grafica-container">
+                <div id="barra-Luka-Doncic" class="barra"></div>
+            </div>
+            <p><span id="votos-Luka-Doncic">0</span> votos</p>
+            <button class="btn-votar" onclick="votar('Luka Doncic')">Votar</button>
+        </div>
+
+        <div class="card-mvp">
+            <h3>Nikola Jokic</h3>
+            <div class="grafica-container">
+                <div id="barra-Nikola-Jokic" class="barra"></div>
+            </div>
+            <p><span id="votos-Nikola-Jokic">0</span> votos</p>
+            <button class="btn-votar" onclick="votar('Nikola Jokic')">Votar</button>
+        </div>
+
+        <div class="card-mvp">
+            <h3>Victor Wembanyama</h3>
+            <div class="grafica-container">
+                <div id="barra-Victor-Wembanyama" class="barra"></div>
+            </div>
+            <p><span id="votos-Victor-Wembanyama">0</span> votos</p>
+            <button class="btn-votar" onclick="votar('Victor Wembanyama')">Votar</button>
+        </div>
+
+        <div class="card-mvp">
+            <h3>Stephen Curry</h3>
+            <div class="grafica-container">
+                <div id="barra-Stephen-Curry" class="barra"></div>
+            </div>
+            <p><span id="votos-Stephen-Curry">0</span> votos</p>
+            <button class="btn-votar" onclick="votar('Stephen Curry')">Votar</button>
+        </div>
+    </div>
+</section>
+        <section class="page-section bg-light" id="contactos">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contacta a los campeones</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="imagenes/assets/img/team/1.jpeg" alt="..." /><br></br>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/gabo_house_23" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://wa.me/+525574188309" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="imagenes/assets/img/team/2.png" alt="..." /><br></br>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/gabo_house_23" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://wa.me/+525574188309" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="imagenes/assets/img/team/3.jpeg" alt="..." /><br></br>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/david_jeromart" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://wa.me/+5215619448944" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="scripts.js"></script>
+        <script type="module" src="votos.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    </body>
+</html>
