@@ -11536,3 +11536,18 @@ section#contact form#contactForm :-ms-input-placeholder {
     color: #17a2b8;
     background: transparent;
 }
+.video-container {
+    width: 100%;
+    max-width: 800px; /* Tamaño máximo */
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombrita pro */
+    border: 2px solid #00538C; /* El azul de los Mavs */
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la forma del video */
+    border: none;
+}
